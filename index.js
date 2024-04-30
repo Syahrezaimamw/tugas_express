@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-  res.send('NAMA : syahreza imam w')
+  res.send('NAMA : SYAHREZA IMAM WAHYUDI </br> KELAS : XI RPL </br> HELLO WORLD')
 //  res.sendFile('./home.html' , {root:__dirname})
 })
 
