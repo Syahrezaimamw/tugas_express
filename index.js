@@ -3,9 +3,7 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-  res.send('Hello World!  ')
-  res.send('NAMA : Syahreza Imam Wahyudi')
-  res.send('KELAS : XI RPL')
+ res.sendFile('./home.html' , {root:__dirname})
 })
 
 app.listen(port, () => {
