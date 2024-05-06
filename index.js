@@ -29,7 +29,7 @@ app.get('/json', (req, res) => {
 })
 
 app.get('/profile',(req,res)=>{
-  res.send('<h1 style="color: brown;">Saya Syahreza Imam Wahyudi</h1>')
+  res.send('<div ><h1>NAMA : <span style="color: brown;">SYAHREZA IMAM WAHYUDI</span></h1> <h1>KELAS : <span style="color: brown;">XI RPL</span></h1> <h1>KEAHLIAN : <span style="color: brown;">SEMUA BISA</span></h1></div>')
 })
 app.use('/',(req,res)=>{
   res.status(404)
