@@ -29,7 +29,7 @@ app.get('/json', (req, res) => {
 })
 
 app.get('/profile',(req,res)=>{
-  res.sendFile('./home.html',{root: __dirname})
+  res.send('<h1 style="color: brown;">Saya Syahreza Imam Wahyudi</h1>')
 })
 app.use('/',(req,res)=>{
   res.status(404)
