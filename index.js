@@ -22,15 +22,29 @@ const nama='Syahreza Imam Wahyudi'
 // // //  res.sendFile('./home.html' , {root:__dirname})
 // })
 app.get('/json', (req, res) => {
-  res.cookie('username','Syahreza')
+  res.cookie('username','Syahreza',{
+    httpOnly:true,
+    secure:true,
+  })
   // res.cookie('username','Syahreza',{domain:'.rimayu18.com',path:'/addres'})
   // res.send(200).json({username:'Syahreza'})
   res.json({username:'Syahreza'})
 })
 
 app.get('/profile',(req,res)=>{
+  res.clearCookie('username')
   res.send('<div ><h1>NAMA : <span style="color: brown;">SYAHREZA IMAM WAHYUDI</span></h1> <h1>KELAS : <span style="color: brown;">XI RPL</span></h1> <h1>KEAHLIAN : <span style="color: brown;">SEMUA BISA</span></h1></div>')
 })
+
+app.get('/cobass', (req, res)=> {
+  res.send('djadaj')
+})
+
+
+
+
+
+
 app.use('/',(req,res)=>{
   res.status(404)
   res.send('Maaf pak dicky halaman tidak tersedia')
