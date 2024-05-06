@@ -27,6 +27,10 @@ app.get('/json', (req, res) => {
   // res.send(200).json({username:'Syahreza'})
   res.json({username:'Syahreza'})
 })
+
+app.get('/profile',(req,res)=>{
+  res.sendFile('./home.html',{root: __dirname})
+})
 app.use('/',(req,res)=>{
   res.status(404)
   res.send('Maaf pak dicky halaman tidak tersedia')
